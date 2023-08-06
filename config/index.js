@@ -2,13 +2,15 @@ const {BrowserWindow, app} = require('electron')
 
 function createWindow() {
     const window = new BrowserWindow({
-        width: 600,
+        width: 1200,
         height: 800,
         center: true,
         resizable: true,
         title: 'Copy Queue',
     })
-    window.loadFile('index.html')
+
+    window.webContents.openDevTools()
+    window.loadFile('./config/index.html')
 }
 
 app.whenReady().then(createWindow)

@@ -2,7 +2,7 @@
   "name": "copyqueue",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "config/index.js",
   "scripts": {
     "start": "electron .",
     "watch": "webpack --config webpack.common.js --watch"
@@ -13,7 +13,8 @@
     "@babel/preset-typescript": "^7.22.5",
     "electron": "^25.4.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.7"
   },
   "devDependencies": {
     "@babel/core": "^7.22.9",
