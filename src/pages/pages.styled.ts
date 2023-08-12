@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const App = styled.div`
   min-height: 100%;
@@ -14,10 +14,10 @@ const Toolbar = styled.div`
   justify-content: flex-end;
 `
 
-const ToolbarRecord = styled.div<{$selected?: boolean}>`
+const ToolbarRecord = styled.div<{ $selected?: boolean }>`
   padding: 5px 10px;
   cursor: pointer;
-  background-color: ${({ $selected }) => $selected && "rgb(255,214,214)"};
+  background-color: ${({ $selected }) => $selected && 'rgb(255,214,214)'};
   
   border: 1px solid transparent;
   border-radius: 3px;
@@ -37,5 +37,5 @@ export const Styled = {
   App,
   Toolbar,
   ToolbarRecord,
-  Page,
+  Page
 }

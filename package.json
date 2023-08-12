@@ -5,7 +5,8 @@
   "main": "config/index.js",
   "scripts": {
     "start": "electron .",
-    "watch": "webpack --config webpack.common.js --watch"
+    "watch": "webpack --config webpack.common.js --watch",
+    "lint": "eslint --ext .ts,.tsx src --fix"
   },
   "author": "PlesneviyGRIB",
   "license": "ISC",
@@ -31,6 +32,7 @@
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.3",
     "prettier": "3.0.1",
@@ -44,8 +46,17 @@
       "pre-commit": "lint-staged"
     }
   },
+  "eslintConfig": {
+    "extends": [
+      "standard-with-typescript",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended"
+
+    ]
+  },
+
   "lint-staged": {
-    "**/*.js": [
+    "**/*.{ts, tsx, js}": [
       "eslint --fix",
       "git add"
     ]

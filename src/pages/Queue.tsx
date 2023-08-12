@@ -1,8 +1,8 @@
-import React, {FC} from "react";
-import {Styled as S} from './pages.styled'
+import React, { type FC } from 'react';
+import { Styled as S } from './pages.styled';
 
 export const Queue: FC = () => {
-    return (
+  return (
         <S.Page></S.Page>
-    )
+  )
 }
